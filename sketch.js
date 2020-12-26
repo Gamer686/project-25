@@ -8,11 +8,11 @@ var ground;
 var binImg,bin;
 
 function preload(){
-binImg = loadImage("Images/dustbin.png");
+binImg = loadImage("dustbin.png");
 }
 function setup() {
 	createCanvas(800, 700);
-   rectMode(CENTER);
+   
 
 	engine = Engine.create();
 	world = engine.world;
@@ -34,7 +34,7 @@ function setup() {
 }
 
 function draw() {
-   background();
+   background("white");
    
    ground.display();
    leftWallDustbin.display();
@@ -48,7 +48,7 @@ function draw() {
 }
 function keyPressed(){
 	if(keyCode===UP_ARROW){
-		Matter.Body.applyForce(paper.body,paper.body.position,{x:10,y:-15});
+		Matter.Body.applyForce(paper.body,paper.body.position,{x:13,y:-15});
 
 	}
 }

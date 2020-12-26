@@ -9,16 +9,18 @@ class Paper{
 
 this.body = Bodies.circle(100,300,10,options);
 this.width = 33;
-this.image = loadImage("Images/paper.png");
+this.image = loadImage("paper.png");
 World.add(world,this.body);
 
    }
    display(){
+       push()
        var pos = this.body.position;
        var angle = this.body.angle;
        fill("White");
        rotate(angle);
        imageMode(CENTER);
        image( this.image,pos.x,pos.y,this.width,this.width);
+       pop()
    }
 }
