@@ -18,7 +18,7 @@ function setup() {
 	world = engine.world;
 	Engine.run(engine);
 
-    bin = createSprite(610,619,100,200);
+  bin = createSprite(610,580,100,20);
     bin.addImage(binImg);
      bin.scale = 0.45;
 	leftWallDustbin = new DustBin(550,620,20,100);
@@ -35,20 +35,20 @@ function setup() {
 
 function draw() {
    background("white");
-   
+   drawSprites();
    ground.display();
    leftWallDustbin.display();
    rightWallDustbin.display();
    bottomWallDustbin.display();
    paper.display();
   
-   drawSprites();
+   
 
  
 }
 function keyPressed(){
 	if(keyCode===UP_ARROW){
-		Matter.Body.applyForce(paper.body,paper.body.position,{x:13,y:-15});
+		Matter.Body.applyForce(paper.body,paper.body.position,{x:11,y:-15});
 
 	}
 }
