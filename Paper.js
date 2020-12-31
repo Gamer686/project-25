@@ -7,8 +7,8 @@ class Paper{
             density:1.2
     }
 
-this.body = Bodies.circle(100,300,radius,options);
-this.radius = radius*2;
+this.body = Bodies.circle(100,300,33,options);
+this.radius = 33;
 this.image = loadImage("paper.png");
 World.add(world,this.body);
 
@@ -21,7 +21,7 @@ World.add(world,this.body);
        fill("White");
        rotate(angle);
        imageMode(CENTER);
-       image( this.image,pos.x,pos.y,this.radius*2,this.radius*2);
+       image( this.image,pos.x,pos.y,this.radius,this.radius);
        pop()
    }
 }
