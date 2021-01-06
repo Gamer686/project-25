@@ -8,20 +8,20 @@ class Paper{
     }
 
 this.body = Bodies.circle(100,300,33,options);
-this.radius = 33;
+this.radius = 15;
 this.image = loadImage("paper.png");
 World.add(world,this.body);
 
    }
    display(){
        push()
-       translate
        var pos = this.body.position;
        var angle = this.body.angle;
        fill("White");
+       translate(pos.x,pos.y)
        rotate(angle);
        imageMode(CENTER);
-       image( this.image,pos.x,pos.y,this.radius,this.radius);
+       image( this.image,0,0,this.radius*2,this.radius*2);
        pop()
    }
 }
